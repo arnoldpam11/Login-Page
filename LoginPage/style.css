@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #565656;
+    font-family: 'Poppins';
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.left-container {
+    background: #F8F8F8;
+    min-width: 500px;
+    min-height: 520px;
+    text-align: center;
+    padding: 2rem;
+}
+.login-welcome h2 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 50px 0px 2px 0px;
+}
+.login-welcome .description {
+    font-size: 13px;
+    font-weight: 400;
+    color: #636364;
+    margin-left: 20px;
+}
+input[type="email"], input[type="password"] {
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #C4C4C4;
+    background: #F8F8F8;
+    width: 60%;
+    padding: 10px;
+}
+  input:focus {
+    border-color: #5b9bd5; 
+    box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+  }
+  
+.email, .password {
+    text-align: left;
+    margin-left: 5rem;
+    font-size: 12px;
+    font-weight: bold;
+}
+.login-form, label {
+    padding: 10px;
+    display: block;
+}
+input[type="checkbox"] label {    
+    width: 13px;
+    height: 12px;
+    border-radius: 4px;
+}
+input[type="checkbox"] {
+    margin-right: -5px;
+    cursor: pointer;
+} 
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+.right-container img {
+    max-width: 100%;
+    height: auto;
+}
+.forgot-password {
+    padding-left: 2.4rem;
+    text-decoration: none;
+    color: #000000;
+}
+button {
+    display: block;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    background: #F8F8F8;
+    width: 60%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sign-in-btn {
+    margin-bottom: 10px;
+    background-color: #EA454C;
+    color: #F8F8F8;
+    cursor: pointer;
+}
+.sign-in-btn:hover {
+    background-color: #ea8d8d;
+    color: #000000;
+}
+.google-icon {
+    width: 25px;
+    height: 25px;
+}
+.google-sign-in-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C4C4C4;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+    cursor: pointer;
+}
+.google-sign-in-btn:hover {
+    background-color: #000000;
+    color: #F8F8F8;
+}
+.google-icon {
+    margin-right: 8px;
+}
+input[type="email"], input[type="password"], button {
+    box-shadow: 0 5px 10px 0 rgba(87, 79, 79, 0.19);
+}
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 40% auto;
+        width: 100%;
+    }
+    .athlete-logo {
+        min-width: 500px;
+    }
+  }
+.athlete-logo {
+    max-width: 500px;
+    height: 520px;
+}
