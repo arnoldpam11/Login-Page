@@ -1,143 +1,151 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body {
-    background: #565656;
-    font-family: 'Poppins';
+
+:root {
+    --very-light-gray: #F8F8F8;
+    --gray-dark: #636364;
+    --light-red: #EA454C;
+    --very-dark-gray: #565656;
 }
-.container {
+
+body {
+    font-family: 'Poppins';
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: var(--very-dark-gray);
+}
+
+/* Global */
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
-.left-container {
-    background: #F8F8F8;
-    min-width: 500px;
-    min-height: 520px;
+
+.container {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.division-1 {
+    background-color: var(--very-light-gray);
+    padding: 4rem 5rem;
+}
+
+header {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
-.login-welcome h2 {
-    font-size: 30px;
+
+header .title {
     font-weight: 600;
-    padding: 50px 0px 2px 0px;
+    font-size: 30px;
 }
-.login-welcome .description {
-    font-size: 13px;
-    font-weight: 400;
-    color: #636364;
-    margin-left: 20px;
+
+header .pre-title {
+    color: var(--gray-dark);
+    font-size: 12px;
 }
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.email, .password{
+    font-weight: 600;
+    
+}
+
 input[type="email"], input[type="password"] {
     border-radius: 10px;
-    outline: none;
     border: 1px solid #C4C4C4;
-    background: #F8F8F8;
-    width: 70%;
-    padding: 10px;
+    box-shadow: 0 1px 10px 0 rgba(87, 79, 79, 0.19);
+    outline: none;
+    margin: 0.60rem 0;
+    padding: 0.80rem;
 }
-  input:focus {
-    border-color: #5b9bd5; 
-    box-shadow: 0 0 1px rgba(91, 155, 213, 0.5);
-  }
-  
-.email, .password {
-    text-align: left;
-    margin-left: 3.5rem;
+
+.form-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
+    gap: 3rem;
+    margin: 0.30rem 0;
 }
-.login-form, label {
-    padding: 10px;
-    display: block;
+
+.division-2 {
+    background-image: url('c392ba101244345\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-input[type="checkbox"] label {    
-    width: 13px;
-    height: 12px;
-    border-radius: 4px;
-}
-input[type="checkbox"] {
-    margin-right: -5px;
-    cursor: pointer;
-} 
-.container-2 {
+
+.checkbox-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
-    font-weight: bold;
-    padding-top: 8px;
-    overflow: hidden;
+    gap: 5px;
 }
-.right-container img {
-    max-width: 100%;
-    height: auto;
-}
+
 .forgot-password {
-    padding-left: 2.4rem;
     text-decoration: none;
-    color: #000000;
+    color: black;
 }
-button {
-    display: block;
-    font-size: 12px;
+
+.form-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.btn-1 {
+    background-color: var(--light-red);
+    border: 1px solid var(--light-red);
     border-radius: 10px;
-    border: 1px solid #C4C4C4;
-    background: #F8F8F8;
-    width: 70%;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.sign-in-btn {
-    margin-bottom: 10px;
-    background-color: #EA454C;
-    color: #F8F8F8;
+    color: #fff;
+    font-weight: 500;
     cursor: pointer;
+    padding: 0.80rem;
 }
-.sign-in-btn:hover {
-    background-color: #ea8d8d;
-    color: #000000;
+
+.btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.50rem;
 }
+
+.btn-1, .btn-2 {
+    box-shadow: 0 1px 10px 0 rgba(87, 79, 79, 0.19);
+}
+
 .google-icon {
     width: 25px;
     height: 25px;
 }
-.google-sign-in-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #C4C4C4;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px;
-    cursor: pointer;
-}
-.google-sign-in-btn:hover {
-    background-color: #000000;
-    color: #F8F8F8;
-}
-.google-icon {
-    margin-right: 8px;
-}
-input[type="email"], input[type="password"], button {
-    box-shadow: 0 1px 10px 0 rgba(87, 79, 79, 0.19);
-}
-@media (max-width: 768px) {
+
+/*Media Queries */
+@media (max-width: 58em) {
     .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 50% 0;
+        grid-template-columns: 1fr;
     }
-    .athlete-logo {
-       min-width: 500px;
-    }
-  }
-.athlete-logo {
-    max-width: 500px;
-    height: 520px;
 }
